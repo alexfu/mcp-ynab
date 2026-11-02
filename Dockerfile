@@ -13,7 +13,7 @@ COPY pyproject.toml uv.lock README.md ./
 RUN pip install --no-cache-dir uv && \
     uv sync --frozen --no-dev --no-install-project
 
-COPY main.py ./
+COPY main.py caller_authorization.py ./
 RUN uv sync --frozen --no-dev
 
 ENV PATH="/app/.venv/bin:$PATH"
